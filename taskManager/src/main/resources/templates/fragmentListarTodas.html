@@ -1,0 +1,19 @@
+<!-- fragments.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="todasTareas">
+    <h1>Las tareas son: </h1>
+	    <table>
+	    	<tr>
+	    		<th>Tarea</th>
+	    		<th>Descripción</th>
+	    	</tr>
+	    	<tr th:each="tarea : ${tareas}">
+	    		<td th:text="${tarea.nombre}"></td>
+	    		<td th:text="${tarea.descripcion}"></td>
+	    	</tr>
+	    </table>
+    </div>
+</body>
+</html>
