@@ -3,12 +3,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 	<div th:fragment="todasTareas">
-    <h1>Las tareas son: </h1>
+        <h4>Todas las tareas</h4>
 	    <table>
-	    	<tr>
+	    <!-- 	<tr>º
 	    		<th>Tarea</th>
 	    		<th>Descripción</th>
-	    	</tr>
+	    	</tr> -->
 	    	<tr th:each="tarea : ${tareas}">
 	    		<td th:text="${tarea.nombre}"></td>
 	    		<td th:text="${tarea.descripcion}"></td>

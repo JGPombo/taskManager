@@ -22,4 +22,10 @@ public class TareaController {
 		model.addAttribute("tareas", tareaServiceImpl.obtenerTodas()); 
 		return "tareas"; 
 	}
+	
+	@GetMapping("/completadas")
+	public String obtenerTareasCompletadas() {
+
+		return "completadas"; 
+	}
 }

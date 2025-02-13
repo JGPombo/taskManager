@@ -1,0 +1,15 @@
+  /* Asegura que el contenedor de contenido ocupe toda la altura restante */
+    .content-wrapper {
+      display: flex;
+      height: calc(100vh - 56px); /* 56px es la altura aproximada de la navbar */
+    }
+    aside {
+      width: 250px;
+      background: #f8f9fa;
+      padding: 15px;
+      border-right: 1px solid #dee2e6;
+    }
+    main {
+      flex-grow: 1;
+      padding: 15px;
+    }
