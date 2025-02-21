@@ -17,15 +17,33 @@ public class TareaController {
 		return "inicio"; 
 	}
 	
-	@GetMapping("/listarTareas")
-	public String obtenerTodasTareas(Model model) {
-		model.addAttribute("tareas", tareaServiceImpl.obtenerTodas()); 
-		return "tareas"; 
-	}
-	
-	@GetMapping("/completadas")
-	public String obtenerTareasCompletadas() {
-
-		return "completadas"; 
-	}
+//	@GetMapping("/listarTareas")
+//	public String obtenerTodasTareas(Model model) {
+//		model.addAttribute("tareas", tareaServiceImpl.obtenerTodas()); 
+//		return "tareas"; 
+//	}
+//	
+//	@GetMapping("/completadas")
+//	public String obtenerTareasCompletadas() {
+//
+//		return "completadas"; 
+//	}
+//	
+   
+    @GetMapping("/tareas")
+    public String mostrarTareas(Model model) {
+        model.addAttribute("tareas", tareaServiceImpl.obtenerTodas());
+        return "tareas"; // Carga tareas.html desde templates/
+    }
+    @GetMapping("/completadas")
+    public String mostrarCompletadas(Model model) {
+//        model.addAttribute("tareas", tareaServiceImpl.obtenerTodas());
+        return "completadas"; // Carga tareas.html desde templates/
+    }
+    @GetMapping("/miDia")
+    public String mostrarMiDia(Model model) {
+//        model.addAttribute("tareas", tareaServiceImpl.obtenerTodas());
+        return "miDia"; // Carga tareas.html desde templates/
+    }
+    
 }
